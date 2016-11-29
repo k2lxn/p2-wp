@@ -115,6 +115,10 @@ add_action( 'widgets_init', 'pollinator_widgets_init' );
  */
 function pollinator_scripts() {
 	wp_enqueue_style( 'pollinator-style', get_stylesheet_uri() );
+        
+        // Add Google Fonts
+        //wp_enqueue_style('pollinator-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:300,300italic,400,400italic,700,700italic|Roboto-Slab:300,400,700');
+        wp_enqueue_style('pollinator-local-fonts', get_template_directory_uri() . '/fonts/custom-fonts.css');
 
 	wp_enqueue_script( 'pollinator-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
